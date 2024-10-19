@@ -1,19 +1,16 @@
-frontend/
+project-directory/
 │
-├── public/
-│   └── index.html             # Main HTML file for React app
+├── models/
+│   ├── User.js         # User Model for storing users
+│   └── Task.js         # Task Model for user tasks
 │
-├── src/
-│   ├── components/
-│   │   ├── Signup.js          # Signup form component
-│   │   ├── Login.js           # Login form component
-│   │   ├── TaskList.js        # Task list and task creation component
-│   │   ├── Categories.js      # Categories management component
-│   │   └── Navbar.js          # Simple Navbar for navigation
-│   │
-│   ├── App.js                 # Main App component
-│   ├── index.js               # Entry point for React app
-│   └── App.css                # Main CSS for styling
+├── routes/
+│   ├── authRoutes.js   # Routes for signup, login, and logout
+│   └── taskRoutes.js   # Routes for task management (create, edit, delete tasks)
 │
-├── package.json               # Project metadata and dependencies
-└── .env                       # Environment variables (e.g., API URLs)
+├── middleware/
+│   └── authMiddleware.js # Middleware to protect routes for authenticated users
+│
+├── .env                # Environment variables for MongoDB connection and JWT secret
+├── server.js           # Main server file
+└── package.json        # Project metadata and dependencies
